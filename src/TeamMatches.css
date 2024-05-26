@@ -1,0 +1,70 @@
+/* TeamMatches.css */
+
+.team-matches {
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #005bbb;
+  }
+  
+  .team-matches h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #005bbb;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .search-bar label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #005bbb;
+  }
+  
+  .search-bar input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  .matches-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .match-item {
+    background-color: white;
+    border: 2px solid #d52b1e;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .match-item:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .match-item div {
+    margin: 5px 0;
+  }
+  

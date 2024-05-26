@@ -1,0 +1,60 @@
+/* KnockoutStage.css */
+
+.knockout-stage {
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #005bbb;
+  }
+  
+  .knockout-stage h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .stages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stage {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .stage h3 {
+    font-size: 1.5rem;
+    color: #005bbb;
+    margin-bottom: 10px;
+  }
+  
+  .stage ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .match-item {
+    background-color: white;
+    border: 2px solid #d52b1e;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .match-item:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .match-item div {
+    margin: 5px 0;
+  }
+  
+  .match-item:hover {
+    background-color: #f0f8ff;
+  }
+  

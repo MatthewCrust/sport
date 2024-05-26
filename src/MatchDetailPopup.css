@@ -1,0 +1,73 @@
+/* MatchDetailPopup.css */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .match-detail-popup {
+    background-color: white;
+    border: 2px solid #d52b1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .match-detail-content {
+    font-family: 'Roboto', sans-serif;
+    color: #005bbb;
+  }
+  
+  .match-detail-content h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #005bbb;
+    margin-bottom: 20px;
+  }
+  
+  .match-detail-content p, 
+  .match-detail-content ul {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .match-detail-content strong {
+    color: #d52b1e;
+  }
+  
+  .match-detail-content h3 {
+    color: #d52b1e;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .match-detail-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .match-detail-content li {
+    background-color: #f0f8ff;
+    border: 1px solid #005bbb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #d52b1e;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  

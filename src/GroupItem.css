@@ -1,0 +1,43 @@
+/* GroupItem.css */
+
+.group-item {
+    background-color: white;
+    border: 2px solid #d52b1e;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .group-item h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #005bbb;
+    margin-bottom: 10px;
+  }
+  
+  .group-item table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .group-item th, .group-item td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .group-item th {
+    background-color: #005bbb;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .group-item tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .group-item tr:hover {
+    background-color: #ddd;
+  }
+  

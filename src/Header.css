@@ -1,0 +1,25 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #005bbb;
+    color: white;
+    padding: 20px;
+    border-bottom: 4px solid #d52b1e;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .world-cup-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+  }
+  
