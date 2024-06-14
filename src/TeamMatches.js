@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import MatchDetailPopup from './MatchDetailPopup';
-import './TeamMatches.css'; // Make sure to import the CSS file
+import './TeamMatches.css'; 
+import { AuthContext } from './AuthContext'; 
 
 const TeamMatches = ({ matches }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [showScores, setShowScores] = useState(false);
   const [selectedMatch, setSelectedMatch] = useState(null);
+  const { isLoggedIn } = useContext(AuthContext); 
 
-  // Filter matches based on search term
   const filteredMatches = matches.filter(match =>
     match.team1.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     match.team2.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -16,6 +17,10 @@ const TeamMatches = ({ matches }) => {
   const handleMatchClick = (match) => {
     setSelectedMatch(match);
   };
+
+  if (!isLoggedIn) {
+    return <div></div>;
+  }
 
   return (
     <div className="team-matches">

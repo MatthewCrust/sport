@@ -3,7 +3,7 @@ import Header from './Header';
 import GroupList from './GroupList';
 import KnockoutStage from './KnockoutStage';
 import TeamMatches from './TeamMatches';
-
+import { AuthProvider } from './AuthContext';
 const App = () => {
   const [groups, setGroups] = useState([]);
   const [knockoutStages, setKnockoutStages] = useState({});
@@ -21,11 +21,10 @@ const App = () => {
 
           data.rounds.forEach(round => {
             round.matches.forEach(match => {
-              allMatches.push(match);  // Add every match to the allMatches array
+              allMatches.push(match); 
 
               const { team1, team2, score1, score2, group, knockout } = match;
 
-              // Handle group stages
               if (group) {
                 if (!groupPoints[group]) {
                   groupPoints[group] = {};
@@ -47,7 +46,6 @@ const App = () => {
                   groupPoints[group][team2.code].points += 1;
                 }
               } else if (knockout) {
-                // Handle knockout stages
                 const stage = round.name;
                 if (!knockoutStages[stage]) {
                   knockoutStages[stage] = [];
@@ -64,7 +62,7 @@ const App = () => {
 
           setGroups(sortedGroups);
           setKnockoutStages(knockoutStages);
-          setAllMatches(allMatches);  // Set all matches to state
+          setAllMatches(allMatches);
         } else {
           console.error('No match data found in the API response.');
         }
@@ -78,10 +76,12 @@ const App = () => {
 
   return (
     <div>
-      <Header />
-      <GroupList groups={groups} />
-      <KnockoutStage stages={knockoutStages} />
-      <TeamMatches matches={allMatches} />
+      <AuthProvider>
+        <Header />
+        <GroupList groups={groups} />
+        <KnockoutStage stages={knockoutStages} />
+        <TeamMatches matches={allMatches} />
+      </AuthProvider>
     </div>
   );
 };

@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import MatchDetailPopup from './MatchDetailPopup';
-import './KnockoutStage.css'; // Make sure to import the CSS file
+import './KnockoutStage.css'; 
+import { AuthContext } from './AuthContext'; 
 
 const KnockoutStage = ({ stages }) => {
   const [selectedMatch, setSelectedMatch] = useState(null);
+  const { isLoggedIn } = useContext(AuthContext); 
 
   const handleMatchClick = (match) => {
     setSelectedMatch(match);
   };
+
+  if (!isLoggedIn) {
+    return <div></div>;
+  }
 
   return (
     <div className="knockout-stage">

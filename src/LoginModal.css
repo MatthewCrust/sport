@@ -1,0 +1,76 @@
+/* LoginModal.css */
+
+.login-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .login-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .login-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-modal-content .close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .login-modal-content h2 {
+    margin-top: 0;
+    color: #005bbb;
+  }
+  
+  .login-modal-content .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .login-modal-content .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-modal-content .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-modal-content .submit-button {
+    background-color: #005bbb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-modal-content .submit-button:hover {
+    background-color: #004494;
+  }
+  
+  .alert {
+    color: red;
+    margin-top: 10px;
+  }
+  
